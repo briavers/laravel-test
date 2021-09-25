@@ -12,12 +12,13 @@ This is a simple case study created by Brian Verschoore
 127.0.0.1   mysql redis memcached
 ```
 
-4. run `composer install`
-5. start Sail `vendor/bin/sail up`
-6. install and run npm. This can be done using sail `vendor/bin/sail npm install` & `vendor/bin/sail npm run prod` 
-7. Set the app key `vendor/bin/sail artisan key:generate`
-8. run the migrations using `vendor/bin/sail artisan migrate`
-9. Finally, you can find your site at [localhost](http://localhost/)
+4. Run `composer install`.
+5. Start Sail `vendor/bin/sail up`.
+6. Install and run npm. This can be done using sail `vendor/bin/sail npm install` & `vendor/bin/sail npm run prod`.
+7. Set the app key `vendor/bin/sail artisan key:generate`.
+8. Run the migrations using `vendor/bin/sail artisan migrate`.
+9. Create your 'admin' user using `php artisan user:create` and follow the instructions to provide a name, email and password.
+10. Finally, you can find your site at [localhost](http://localhost/).
 
 ##Possible issues during setup
 1. please make sure no other docker or apache/nginx/mysql... services are running as this might cause certain ports to be already taken. 
