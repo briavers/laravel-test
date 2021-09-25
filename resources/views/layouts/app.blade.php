@@ -35,7 +35,9 @@
 
             <!-- Page Content -->
             <main>
-                {{ $slot }}
+                <div class="container mx-auto my-3">
+                    {{ $slot }}
+                </div>
             </main>
         </div>
 

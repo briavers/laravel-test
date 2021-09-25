@@ -12,29 +12,6 @@ class CityPolicy
     use HandlesAuthorization;
 
     /**
-     * Determine whether the user can view any models.
-     *
-     * @param User $user
-     * @return Response|bool
-     */
-    public function viewAny(User $user): Response|bool
-    {
-        //
-    }
-
-    /**
-     * Determine whether the user can view the model.
-     *
-     * @param User $user
-     * @param City $city
-     * @return Response|bool
-     */
-    public function view(User $user, City $city): Response|bool
-    {
-        //
-    }
-
-    /**
      * Determine whether the user can create models.
      *
      * @param User $user
@@ -42,7 +19,7 @@ class CityPolicy
      */
     public function create(User $user): Response|bool
     {
-        //
+       return true;
     }
 
     /**
@@ -54,7 +31,7 @@ class CityPolicy
      */
     public function update(User $user, City $city): Response|bool
     {
-        //
+        return true;
     }
 
     /**
@@ -66,7 +43,7 @@ class CityPolicy
      */
     public function delete(User $user, City $city): Response|bool
     {
-        //
+        return true;
     }
 
     /**
@@ -78,7 +55,7 @@ class CityPolicy
      */
     public function restore(User $user, City $city): Response|bool
     {
-        //
+        return true;
     }
 
     /**
@@ -90,6 +67,6 @@ class CityPolicy
      */
     public function forceDelete(User $user, City $city): Response|bool
     {
-        //
+        return true;
     }
 }

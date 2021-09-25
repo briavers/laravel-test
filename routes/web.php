@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\City\Index as CityIndex;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,9 +13,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', CityIndex::class)->name('home');
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::prefix('/city')->group(function () {
+   Route::get('/', CityIndex::class)->name('city-index');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
