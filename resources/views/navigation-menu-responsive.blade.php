@@ -3,7 +3,10 @@
     <div class="pt-2 pb-3 space-y-1">
         @auth
             <x-jet-responsive-nav-link href="{{ route('city-index') }}" :active="request()->routeIs('city-index')">
-                {{ __('City') }}
+                {{ __u('model.city.model', 0) }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('company-index') }}" :active="request()->routeIs('company-index')">
+                {{ __u('model.company.model', 0) }}
             </x-jet-responsive-nav-link>
         @else
             <x-jet-responsive-nav-link href="{{ route('login') }}" :active="request()->routeIs('login')">

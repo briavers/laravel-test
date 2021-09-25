@@ -4,7 +4,7 @@ namespace App\Http\Livewire\City;
 
 use App\Models\City;
 use App\Repositories\Interfaces\CityRepositoryInterface;
-use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Collection;
 use Livewire\Component;
 
 class Index extends Component
@@ -13,7 +13,7 @@ class Index extends Component
 
     public function mount(CityRepositoryInterface $cityRepository)
     {
-        $this->cities = $cityRepository->selectAll()->sortBy('name');
+        $this->cities = $cityRepository->selectAll();
     }
 
     public function render()

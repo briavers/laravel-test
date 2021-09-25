@@ -12,7 +12,10 @@
             <!-- Navigation Links -->
             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                 <x-jet-nav-link href="{{ route('city-index') }}" :active="request()->routeIs('city-index')">
-                    {{ __('Cities') }}
+                    {{ __u('model.city.model', 0) }}
+                </x-jet-nav-link>
+                <x-jet-nav-link href="{{ route('company-index') }}" :active="request()->routeIs('company-index')">
+                    {{ __u('model.company.model', 0) }}
                 </x-jet-nav-link>
             </div>
         </div>

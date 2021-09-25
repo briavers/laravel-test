@@ -3,7 +3,9 @@
 namespace App\Providers;
 
 use App\Repositories\CityRepository;
+use App\Repositories\CompanyRepository;
 use App\Repositories\Interfaces\CityRepositoryInterface;
+use App\Repositories\Interfaces\CompanyRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -36,6 +38,10 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(
             CityRepositoryInterface::class,
             CityRepository::class
+        );
+        $this->app->bind(
+            CompanyRepositoryInterface::class,
+            CompanyRepository::class
         );
     }
 }
