@@ -6,6 +6,8 @@ use App\Repositories\CityRepository;
 use App\Repositories\CompanyRepository;
 use App\Repositories\Interfaces\CityRepositoryInterface;
 use App\Repositories\Interfaces\CompanyRepositoryInterface;
+use App\Repositories\Interfaces\VacancyRepositoryInterface;
+use App\Repositories\VacancyRepository;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -42,6 +44,10 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(
             CompanyRepositoryInterface::class,
             CompanyRepository::class
+        );
+        $this->app->bind(
+            VacancyRepositoryInterface::class,
+            VacancyRepository::class
         );
     }
 }

@@ -17,6 +17,9 @@
                 <x-jet-nav-link href="{{ route('company-index') }}" :active="request()->routeIs('company-index')">
                     {{ __u('model.company.model', 0) }}
                 </x-jet-nav-link>
+                <x-jet-nav-link href="{{ route('vacancy-index') }}" :active="request()->routeIs('vacancy-index')">
+                    {{ __u('model.vacancy.model', 0) }}
+                </x-jet-nav-link>
             </div>
         </div>
 

@@ -11,12 +11,14 @@ use Illuminate\Database\Eloquent\Collection;
 class CompanyRepository implements CompanyRepositoryInterface
 {
 
-    public static function selectAll(?array $joins): Collection
+    public static function selectAll(?array $joins = null): Collection
     {
         $companies = Company::query();
         if($joins){
             $companies->with($joins);
         }
+
+        $companies->orderBy('name');
 
         return $companies->get();
     }

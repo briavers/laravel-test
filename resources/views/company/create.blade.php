@@ -36,7 +36,7 @@
                 <div class="flex flex-col mb-4">
                     <div class="flex">
                         <label for="city" class="block text-sm font-medium text-gray-700">
-                            {{__U('model.company.city')}}
+                            {{__U('model.city.model')}}
                         </label>
                     </div>
                     <div class="mt-1 flex rounded-md shadow-sm">

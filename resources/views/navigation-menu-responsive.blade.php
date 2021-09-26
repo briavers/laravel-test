@@ -9,6 +9,9 @@
                 {{ __u('model.company.model', 0) }}
             </x-jet-responsive-nav-link>
         @else
+            <x-jet-responsive-nav-link href="{{ route('vacancy-index') }}" :active="request()->routeIs('vacancy-index')">
+                {{ __u('model.vacancy.model', 0) }}
+            </x-jet-responsive-nav-link>
             <x-jet-responsive-nav-link href="{{ route('login') }}" :active="request()->routeIs('login')">
                 {{ __('login') }}
             </x-jet-responsive-nav-link>

@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'empty' => 'Sorry but we couldn\'t find anything',
     'city' => [
         'model' => 'city|cities',
         'name' => 'name',
@@ -11,6 +12,11 @@ return [
         'model' => 'company|companies',
         'name' => 'name',
         'description' => 'description',
-        'city' => 'city',
+    ],
+    'vacancy' => [
+        'model' => 'vacancy|vacancies',
+        'title' => 'title',
+        'summary' => 'summary',
+        'description' => 'description',
     ],
 ];
