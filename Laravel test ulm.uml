@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>556aa729-82d0-49f4-a7d3-b9c4c752b342.TABLE:laravel_test.cities</OriginalElement>
+  <nodes>
+    <node x="413.59987741079385" y="-51.96216688152387">556aa729-82d0-49f4-a7d3-b9c4c752b342.TABLE:laravel_test.users</node>
+    <node x="676.7535233055585" y="-51.9621668815239">556aa729-82d0-49f4-a7d3-b9c4c752b342.TABLE:laravel_test.password_resets</node>
+    <node x="-202.7244310515424" y="-112.67068453719517">556aa729-82d0-49f4-a7d3-b9c4c752b342.TABLE:laravel_test.cities</node>
+    <node x="-486.34726432166724" y="228.26360412266803">556aa729-82d0-49f4-a7d3-b9c4c752b342.TABLE:laravel_test.vacancies</node>
+    <node x="684.7535233055585" y="63.48664207969844">556aa729-82d0-49f4-a7d3-b9c4c752b342.TABLE:laravel_test.failed_jobs</node>
+    <node x="133.19509350246113" y="210.03746397694525">556aa729-82d0-49f4-a7d3-b9c4c752b342.TABLE:laravel_test.companies</node>
+    <node x="444.59987741079385" y="277.6943858083746">556aa729-82d0-49f4-a7d3-b9c4c752b342.TABLE:laravel_test.sessions</node>
+    <node x="871.9071692003231" y="-51.9621668815239">556aa729-82d0-49f4-a7d3-b9c4c752b342.TABLE:laravel_test.personal_access_tokens</node>
+    <node x="670.7374513265895" y="277.6943858083746">556aa729-82d0-49f4-a7d3-b9c4c752b342.TABLE:laravel_test.migrations</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="556aa729-82d0-49f4-a7d3-b9c4c752b342.TABLE:laravel_test.companies" target="556aa729-82d0-49f4-a7d3-b9c4c752b342.TABLE:laravel_test.cities" relationship="REFERENCES">
+      <point x="0.0" y="-83.0" />
+      <point x="229.69509350246113" y="122.40928307996768" />
+      <point x="-107.72443105154241" y="122.40928307996768" />
+      <point x="0.0" y="83.0" />
+    </edge>
+    <edge source="556aa729-82d0-49f4-a7d3-b9c4c752b342.TABLE:laravel_test.vacancies" target="556aa729-82d0-49f4-a7d3-b9c4c752b342.TABLE:laravel_test.cities" relationship="REFERENCES">
+      <point x="-68.75" y="-116.0" />
+      <point x="-417.59726432166724" y="122.40928307996768" />
+      <point x="-107.72443105154241" y="122.40928307996768" />
+      <point x="0.0" y="83.0" />
+    </edge>
+    <edge source="556aa729-82d0-49f4-a7d3-b9c4c752b342.TABLE:laravel_test.vacancies" target="556aa729-82d0-49f4-a7d3-b9c4c752b342.TABLE:laravel_test.companies" relationship="REFERENCES">
+      <point x="68.75" y="-116.0" />
+      <point x="-280.09726432166724" y="312.0526126234578" />
+      <point x="229.69509350246113" y="312.0526126234578" />
+      <point x="0.0" y="83.0" />
+    </edge>
+    <edge source="556aa729-82d0-49f4-a7d3-b9c4c752b342.TABLE:laravel_test.sessions" target="556aa729-82d0-49f4-a7d3-b9c4c752b342.TABLE:laravel_test.users" relationship="REFERENCES">
+      <point x="0.0" y="-83.0" />
+      <point x="0.0" y="127.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.6035287730727475" showDependencies="false" x="329.7354875104543" y="486.9518755059813" />
+  <SelectedNodes>
+    <node>556aa729-82d0-49f4-a7d3-b9c4c752b342.TABLE:laravel_test.migrations</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Comments</Category>
+    <Category>Key columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+
