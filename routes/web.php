@@ -27,16 +27,16 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', CityIndex::class)->name('home');
+Route::get('/', VacancyIndex::class)->name('home');
 
 
-Route::prefix('/city')->group(function () {
+Route::prefix('/city')->middleware('auth')->group(function () {
     Route::get('/', CityIndex::class)->name('city-index');
     Route::get('/new', CitySet::class)->name('city-create');
     Route::get('/edit/{city}', CitySet::class)->name('city-set');
 });
 
-Route::prefix('/company')->group(function () {
+Route::prefix('/company')->middleware('auth')->group(function () {
     Route::get('/', CompanyIndex::class)->name('company-index');
     Route::post('/', CompanyStoreController::class)->name('company-store');
     Route::get('/new', CompanyCreateController::class)->name('company-create');
@@ -47,11 +47,13 @@ Route::prefix('/company')->group(function () {
 
 Route::prefix('/vacancy')->group(function () {
     Route::get('/', VacancyIndex::class)->name('vacancy-index');
-    Route::post('/', VacancyStoreController::class)->name('vacancy-store');
-    Route::get('/new', VacancyCreateController::class)->name('vacancy-create');
-    Route::get('/edit/{vacancy}', VacancyEditController::class)->name('vacancy-edit');
-    Route::put('/put/{vacancy}', VacancyPutController::class)->name('vacancy-put');
-    Route::delete('/delete/{vacancy}', VacancyDeleteController::class)->name('vacancy-delete');
+    Route::middleware('auth')->group(function () {
+        Route::post('/', VacancyStoreController::class)->name('vacancy-store');
+        Route::get('/new', VacancyCreateController::class)->name('vacancy-create');
+        Route::get('/edit/{vacancy}', VacancyEditController::class)->name('vacancy-edit');
+        Route::put('/put/{vacancy}', VacancyPutController::class)->name('vacancy-put');
+        Route::delete('/delete/{vacancy}', VacancyDeleteController::class)->name('vacancy-delete');
+    });
     Route::get('/{vacancy}', VacancyShowController::class)->name('vacancy-show');
 });
 

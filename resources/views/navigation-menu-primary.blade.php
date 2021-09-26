@@ -4,22 +4,25 @@
         <div class="flex">
             <!-- Logo -->
             <div class="flex-shrink-0 flex items-center">
-                <a href="{{ route('city-index') }}">
+                <a href="{{ route('vacancy-index') }}">
                     <x-jet-application-mark class="block h-9 w-auto" />
                 </a>
             </div>
 
+
             <!-- Navigation Links -->
             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                <x-jet-nav-link href="{{ route('city-index') }}" :active="request()->routeIs('city-index')">
-                    {{ __u('model.city.model', 0) }}
-                </x-jet-nav-link>
-                <x-jet-nav-link href="{{ route('company-index') }}" :active="request()->routeIs('company-index')">
-                    {{ __u('model.company.model', 0) }}
-                </x-jet-nav-link>
                 <x-jet-nav-link href="{{ route('vacancy-index') }}" :active="request()->routeIs('vacancy-index')">
                     {{ __u('model.vacancy.model', 0) }}
                 </x-jet-nav-link>
+                @auth
+                    <x-jet-nav-link href="{{ route('city-index') }}" :active="request()->routeIs('city-index')">
+                        {{ __u('model.city.model', 0) }}
+                    </x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('company-index') }}" :active="request()->routeIs('company-index')">
+                        {{ __u('model.company.model', 0) }}
+                    </x-jet-nav-link>
+                @endauth
             </div>
         </div>
 
