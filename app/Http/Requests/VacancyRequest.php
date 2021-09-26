@@ -2,8 +2,10 @@
 
 namespace App\Http\Requests;
 
+use App\Models\Enums\VacancyTypeEnum;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rule;
 
 class VacancyRequest extends FormRequest
 {
@@ -29,7 +31,8 @@ class VacancyRequest extends FormRequest
             'summary' => 'required|string|max:255',
             'description' => 'required|string|max:65535',
             'city_id' => 'required|integer',
-            'company_id' => 'required|integer'
+            'company_id' => 'required|integer',
+            'type' => ['required', Rule::in(VacancyTypeEnum::getOptions())],
         ];
     }
 }

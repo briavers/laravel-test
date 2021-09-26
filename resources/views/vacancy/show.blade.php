@@ -21,6 +21,13 @@
                 </p>
 
                 <h2 class="text-lg font-bold text-gray-900 ">
+                    {{__U('model.vacancy.type.name')}}
+                </h2>
+                <p class="text-gray-700 my-2 hover-text-900 ">
+                    {{__u('model.vacancy.type.options.' .  $vacancy->type)}}
+                </p>
+
+                <h2 class="text-lg font-bold text-gray-900 ">
                     {{__U('model.vacancy.summary')}}
                 </h2>
                 <p class="text-gray-700 my-2 hover-text-900 ">

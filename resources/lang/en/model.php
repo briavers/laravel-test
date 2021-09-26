@@ -18,5 +18,12 @@ return [
         'title' => 'title',
         'summary' => 'summary',
         'description' => 'description',
+        'type'=> [
+            'name' => 'type',
+            'options' => [
+                'white-collar' => 'white Color',
+                'blue-collar' => 'blue Color'
+            ],
+        ]
     ],
 ];

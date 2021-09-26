@@ -24,6 +24,7 @@ class StoreController extends Controller
         $vacancy->description = $request->input('description');
         $vacancy->city_id = $request->input('city_id');
         $vacancy->company_id = $request->input('company_id');
+        $vacancy->type = $request->input('type');
 
         $this->vacancyRepository->save($vacancy);
 

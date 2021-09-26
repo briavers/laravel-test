@@ -17,6 +17,7 @@
                         <p class="text-gray-700 my-2 hover-text-900 ">
                             <strong> {{__U('model.city.model')}}:</strong> {{$vacancy->city->name}} <br>
                             <strong> {{__U('model.company.model')}}:</strong> {{$vacancy->company->name}} <br>
+                            <strong> {{__U('model.vacancy.type.name')}}:</strong> {{__u('model.vacancy.type.options.' . $vacancy->type)}}<br>
                             <strong> {{__U('model.vacancy.summary')}}:</strong> {{$vacancy->summary}}
                         </p>
                         <div class="flex flex-row">

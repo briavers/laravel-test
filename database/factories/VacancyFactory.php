@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\City;
 use App\Models\Company;
+use App\Models\Enums\VacancyTypeEnum;
 use App\Models\Vacancy;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -39,6 +40,7 @@ class VacancyFactory extends Factory
             'title' => $this->faker->name(),
             'summary' => $this->faker->realText(255),
             'description' => $this->faker->realTextBetween(500, 2000),
+            'type' => $this->faker->randomElement(VacancyTypeEnum::getOptions()),
             'city_id' => City::inRandomOrder()->first('id')->id,
             'company_id' => Company::inRandomOrder()->first('id')->id,
         ];

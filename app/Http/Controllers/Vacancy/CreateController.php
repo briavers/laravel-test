@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Vacancy;
 
 use App\Http\Controllers\Controller;
+use App\Models\Enums\VacancyTypeEnum;
 use App\Models\Vacancy;
 use App\Repositories\Interfaces\CityRepositoryInterface;
 use App\Repositories\Interfaces\CompanyRepositoryInterface;
@@ -24,9 +25,11 @@ class CreateController extends Controller
     {
         $cities = $this->cityRepository->selectAll();
         $companies = $this->companyRepository->selectAll();
+        $types = VacancyTypeEnum::getOptions();
 
         return view('vacancy.create')
             ->with('cities', $cities)
-            ->with('companies', $companies);
+            ->with('companies', $companies)
+            ->with('types', $types);
     }
 }

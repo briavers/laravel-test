@@ -51,8 +51,27 @@
                 </div>
                 <div class="flex flex-col mb-4">
                     <div class="flex">
+                        <label for="type" class="block text-sm font-medium text-gray-700">
+                            {{__U('model.vacancy.type.name')}}
+                        </label>
+                    </div>
+                    <div class="mt-1 flex rounded-md shadow-sm">
+                        <select name="type" id="type" class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300">
+                            @foreach ($types as $type)
+                                <option value="{{$type}}" {{$vacancy->type === $type ? 'selected' : ''}}> {{__u('model.vacancy.type.options.' . $type)}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    @error('type_id')
+                    <div class="flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1">
+                        {{ $message }}
+                    </div>
+                    @enderror
+                </div>
+                <div class="flex flex-col mb-4">
+                    <div class="flex">
                         <label for="city" class="block text-sm font-medium text-gray-700">
-                            {{__U('model.vacancy.city')}}
+                            {{__U('model.city.model')}}
                         </label>
                     </div>
                     <div class="mt-1 flex rounded-md shadow-sm">
@@ -71,7 +90,7 @@
                 <div class="flex flex-col mb-4">
                     <div class="flex">
                         <label for="company" class="block text-sm font-medium text-gray-700">
-                            {{__U('model.vacancy.company')}}
+                            {{__U('model.company.model')}}
                         </label>
                     </div>
                     <div class="mt-1 flex rounded-md shadow-sm">
