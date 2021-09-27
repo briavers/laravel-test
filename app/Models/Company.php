@@ -5,9 +5,11 @@ namespace App\Models;
 use Database\Factories\CompanyFactory;
 use Eloquent;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Carbon;
 
 /**
@@ -19,6 +21,9 @@ use Illuminate\Support\Carbon;
  * @property string $description
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
+ * @property-read City $city
+ * @property-read Collection|Vacancy[] $vacancies
+ * @property-read int|null $vacancies_count
  * @method static CompanyFactory factory(...$parameters)
  * @method static Builder|Company newModelQuery()
  * @method static Builder|Company newQuery()
@@ -30,7 +35,6 @@ use Illuminate\Support\Carbon;
  * @method static Builder|Company whereName($value)
  * @method static Builder|Company whereUpdatedAt($value)
  * @mixin Eloquent
- * @property-read \App\Models\City $city
  */
 class Company extends Model
 {
@@ -39,5 +43,10 @@ class Company extends Model
     public function city(): BelongsTo
     {
         return $this->belongsTo(City::class);
+    }
+
+    public function vacancies(): HasMany
+    {
+        return $this->hasMany(Vacancy::class);
     }
 }

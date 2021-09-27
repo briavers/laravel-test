@@ -41,8 +41,7 @@
                         </label>
                     </div>
                     <div class="mt-1 flex rounded-md shadow-sm">
-                        <textarea name="description" id="description" rows='4' class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300">
-                        </textarea>
+                        <textarea name="description" id="description" rows='4' class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"></textarea>
                     </div>
                     @error('description')
                     <div class="flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1">
