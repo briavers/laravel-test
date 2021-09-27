@@ -2,7 +2,7 @@
 
 This is a simple case study created by Brian Verschoore
 
-##How to set up this application:
+## How to set up this application:
 1. Clone repository
 2. copy .env.example to .env
 3. add following line to your hosts file (/etc/hosts)
@@ -14,11 +14,15 @@ This is a simple case study created by Brian Verschoore
 
 4. Run `composer install`.
 5. Start Sail `vendor/bin/sail up`.
-6. Install and run npm. This can be done using sail `vendor/bin/sail npm install` & `vendor/bin/sail npm run prod`.
+6. Install and run npm. This can be done using sail (in another terminal window) `vendor/bin/sail npm install` & `vendor/bin/sail npm run prod`.
 7. Set the app key `vendor/bin/sail artisan key:generate`.
-8. Run the migrations using `vendor/bin/sail artisan migrate`.
+8. Run the migrations using `vendor/bin/sail artisan migrate` optionaly you can add the `--seed` flag to directly get some example data.
 9. Create your 'admin' user using `php artisan user:create` and follow the instructions to provide a name, email and password.
 10. Finally, you can find your site at [localhost](http://localhost/).
 
-##Possible issues during setup
+## Possible issues during setup
 1. please make sure no other docker or apache/nginx/mysql... services are running as this might cause certain ports to be already taken. 
+
+## Usefull feature
+1. One of the packages installed [barryvdh/laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper) allows for easy properties generation, 
+this can be done by running `composer update-models` once connection has been setup to a database.
